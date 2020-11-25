@@ -1,0 +1,39 @@
+//Create a method to find the sum of the cubes of the digits of an n digit number
+
+
+
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author prakh
+ */
+public class cube_num {
+
+    
+    static int coint(int a){
+        int temp = a;
+        int count = 0;
+        int sum =0;
+        
+        while(temp>0){
+            int num = temp%10;
+            temp = temp/10;
+            sum = sum +(int)Math.pow(num,3);
+        }
+        return sum;
+
+    }
+    public static void main(String[] args) 
+    {
+        // TODO code application logic here
+         Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int sum_of_digit= coint(a);
+        System.out.println(sum_of_digit);
+
+}
+}
+    
+
